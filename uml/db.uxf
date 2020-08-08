@@ -1,0 +1,37 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>220</x><y>40</y><w>210</w><h>110</h></coordinates><panel_attributes>Utilisateur
+--
+_-id: int autoincrement_
+-uuid: String(36) null
+-Email: String(255) not null
+-Pseudo: String(50)
+-Password: String(40) hash-&gt;Salt</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>580</x><y>40</y><w>210</w><h>110</h></coordinates><panel_attributes>Joueur
+--
+_-uuid: String(36) not null_
+-Pseudo: String(50)
+/*Plusieurs Statistique
+Formidables
+*/</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>420</x><y>490</y><w>160</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*
+caractérise</panel_attributes><additional_attributes>10;20;140;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>220</x><y>250</y><w>210</w><h>70</h></coordinates><panel_attributes>Bestiaire
+--
+*id_utilisateur: int
+*id_entré: int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>220</x><y>430</y><w>210</w><h>150</h></coordinates><panel_attributes>entré bestiaire
+--
+_-id: int autoincrement_
+-image: base64
+-nom: String(255)
+-description: String(500)
+-attaque: float
+-pv: int
+-type: int
+-niveau: int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>560</x><y>450</y><w>210</w><h>110</h></coordinates><panel_attributes>Type
+--
+_-id: int autoincrement_
+-nom: String(40)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>140</y><w>80</w><h>130</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+Possède</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>310</y><w>80</w><h>140</h></coordinates><panel_attributes>lt=-
+m1=*
+m2=1
+appartient</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element></diagram>

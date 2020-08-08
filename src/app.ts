@@ -14,7 +14,7 @@ import SocketIO from "socket.io";
 const app: any = express();
 
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+app.set('view engine', 'ejs');
 
 //app.use(logger('dev'));
 app.use(express.json());
@@ -33,7 +33,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 var sess: any = {
   resave: false,
   saveUninitialized: true,
-  secret: process.env.SESSION_SECRET,
+  secret: process.env.SESSION_SECRET || 'KeyBoard Cat',
   name: 'waldSession',
   cookie: {}
 }
@@ -56,7 +56,6 @@ function registerMiddleware(element: any){
   app.use(function (req: express.Request, res: express.Response, next: express.NextFunction) {
     if(element.path == '*'){
       if(!element.exception.includes(req.url.split('/')[1].toLowerCase())){
-        console.log(1)
         import("./controller/middleware/" + element.controller).then((ctrl) => {
           new ctrl.default(req, res, next);
         });

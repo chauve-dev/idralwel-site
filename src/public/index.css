@@ -1,0 +1,395 @@
+/* Responsive
+@media (max-width: 768px) { ... }
+@media (max-width: 992px) { ... }
+@media (max-width: 1200px) { ... }
+*/
+
+@font-face {
+	font-family: "GodOfWar";
+	src: url("/ressources/fonts/GodOfWar.ttf");
+}
+.GodOfWar {
+	font-family: "GodOfWar", sans-serif;
+}
+@font-face {
+	font-family: "Marcellus";
+	src: url("/ressources/fonts/Marcellus.ttf");
+}
+.Marcellus {
+	font-family: "Marcellus", sans-serif;
+}
+@font-face {
+	font-family: "Caveat";
+	src: url("/ressources/fonts/Caveat.ttf");
+}
+.Caveat {
+	font-family: "Caveat", sans-serif;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0 !important;
+	font-family: "Marcellus", sans-serif;
+}
+.modal-open {
+	overflow: initial !important;
+}
+
+/*
+	NAVBAR
+ */
+.navbar .navbar-nav {
+	font-family: "Marcellus", sans-serif;
+}
+.navbar .navbar-brand {
+	font-family: "GodOfWar", sans-serif;
+	color: white;
+}
+.navbar .navbar-nav .nav-link {
+	color: white;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+}
+
+.navbar-toggler {
+	border: 1px solid white;
+	color: white;
+	font-size: 1rem;
+}
+
+/*
+	GENERAL
+ */
+footer {
+	background-color: black;
+	color: white;
+	padding: 3rem;
+}
+
+/*
+	LOGIN/REGISTER MODAL
+ */
+
+#loginModal .register {
+	background: #000000;
+}
+
+/*
+	INTRODUCTION
+ */
+.home-header {
+	background: url("images/background.jpg") #33608a no-repeat center fixed;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.introduction {
+	height: calc(100vh - 108px);
+	min-height: 800px;
+}
+.navigation {
+	margin-bottom: 50px;
+}
+.introduction .container-fluid {
+	height: 100%;
+	position: relative;
+	padding: 0;
+}
+.introduction img {
+	position: absolute;
+}
+.introduction .cloud {
+	height: auto;
+	width: 100%;
+	bottom: 0;
+}
+/*
+	MORNIANDRE (A GAUCHE)
+ */
+.introduction .morniandre {
+	height: 100%;
+	width: auto;
+	left: 150px;
+	opacity: 0;
+	transition: left 2s ease-out, opacity 2s ease-out;
+}
+.introduction .morniandre-after {
+	left: 100px;
+	opacity: 1;
+}
+/*
+	IDRALWEL (A DROITE)
+ */
+.introduction .idralwel {
+	height: 100%;
+	width: auto;
+	right: 150px;
+	opacity: 0;
+	transition: right 2s ease-out, opacity 2s ease-out;
+}
+.introduction .idralwel-after {
+	right: 100px;
+	opacity: 1;
+}
+
+.introduction .logo {
+	height: auto;
+	width: 100%;
+	max-width: 350px;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	transition: top 2s ease-out 1s, opacity 2s ease-out 1s;
+}
+.introduction .logo-after {
+	top: 50%;
+	opacity: 1;
+}
+
+.introduction .texte {
+	height: auto;
+	width: 100%;
+	max-width: 800px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	transition: opacity 2s ease-out 2s;
+}
+.introduction .texte-after {
+	opacity: 1;
+}
+
+@media (max-width: 992px) {
+	.navigation {
+		margin-bottom: 0;
+	}
+	.introduction {
+		height: 500px;
+		min-height: 500px;
+	}
+	.introduction .morniandre,
+	.introduction .idralwel {
+		display: none;
+	}
+	.introduction .logo {
+		transition: top 2s ease-out 0.5s, opacity 2s ease-out 0.5s;
+		padding: 1rem;
+	}
+	.introduction .texte {
+		transition: top 2s ease-out 1s, opacity 2s ease-out 1s;
+		padding: 1rem;
+	}
+}
+
+/*
+	CONTENU
+ */
+.home-content {
+	background: url("images/mur.png") no-repeat center;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.home-content .img-cloud {
+	top: -5px;
+}
+.container-presentation {
+	padding: 3rem;
+}
+.presentation {
+	background: url("images/parchemin.png") no-repeat center;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.presentation-experience,
+.presentation-communaute {
+	padding: 3rem;
+}
+.presentation .col-texte {
+	background-color: white;
+	box-shadow: 0 5px 20px 0 rgba(1, 1, 1, 0.5);
+	font-size: 1.1rem;
+}
+.presentation .col-image img {
+	box-shadow: 0 5px 20px 0 rgba(1, 1, 1, 0.5);
+}
+.presentation-experience .col-texte {
+	margin-top: 50px;
+}
+.presentation-experience .col-image {
+	position: relative;
+	right: 100px;
+}
+.presentation-communaute .col-texte {
+	margin-top: -50px;
+}
+.presentation-communaute .col-image {
+	position: relative;
+	left: 100px;
+	text-align: right;
+}
+@media (max-width: 1200px) {
+	.presentation .col-texte {
+		margin-top: 20px;
+	}
+}
+@media (max-width: 768px) {
+	.container-presentation,
+	.presentation-experience,
+	.presentation-communaute {
+		padding: 1rem;
+	}
+}
+
+.container-reseaux {
+	background: url("images/mur_reverse.png") no-repeat top center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	padding: 3rem 3rem 6rem 3rem;
+}
+.reseaux {
+	background: url("images/poutre.png") no-repeat top center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	padding: 3rem;
+}
+@media (max-width: 768px) {
+	.container-reseaux,
+	.reseaux {
+		padding: 1rem;
+	}
+}
+
+/*
+	NOUS REJOINDRE
+ */
+.nous-rejoindre {
+	position: relative;
+	background: url("images/background_rejoindre.jpg") #000000 no-repeat right;
+	background-size: auto 100%;
+	color: white;
+	height: calc(100vh);
+	min-height: 800px;
+}
+@media (max-width: 992px) {
+	.nous-rejoindre {
+		background: url("images/background_rejoindre_mobile.jpg") #000000 no-repeat right;
+		background-size: auto 100%;
+		height: 100%;
+	}
+}
+.nous-rejoindre .fa-quote-left {
+	font-size: 4rem;
+	position: absolute;
+	bottom: 5px;
+	opacity: 0.33;
+	left: 0;
+}
+.nous-rejoindre .fa-quote-right {
+	font-size: 4rem;
+	position: absolute;
+	top: 5px;
+	opacity: 0.33;
+	right: 0;
+}
+.nous-rejoindre .content {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+}
+@media (max-width: 1200px) {
+	.nous-rejoindre .content {
+		position: initial;
+		transform: none;
+	}
+}
+
+/*
+	ENCYCLOPEDIE
+ */
+.encyclopedie-body {
+	min-width: 900px;
+}
+.encyclopedie {
+	position: relative;
+	background: url("images/background_encyclopedie.jpg") #000000 no-repeat center;
+	background-size: auto;
+	color: white;
+	height: calc(100vh);
+	min-height: 800px;
+}
+.encyclopedie-box {
+	position: absolute;
+	width: 900px;
+	height: 600px;
+	top: 50%;
+	left: 50%;
+	margin-left: -450px;
+	margin-top: -300px;
+}
+.encyclopedie-warning-mobile {
+	display: none;
+}
+@media (max-width: 992px) {
+	.encyclopedie-warning-mobile {
+		display: block;
+	}
+}
+
+.flipbook {
+	color: black;
+	font-size: 1.5rem;
+}
+.flipbook .couverture-front {
+	background: url("images/page_de_couverture.png") transparent no-repeat center !important;
+}
+.flipbook .premiere {
+	background: url("images/derriere_page_de_couverture.png") transparent no-repeat center !important;
+}
+.flipbook .page {
+	background: transparent;
+	overflow: hidden;
+	background-image: url("/images/pages.png");
+}
+.flipbook .page.odd {
+	background-position: 450px 0;
+}
+.flipbook .derniere {
+	background: url("images/derriere_page_de_fin.png") transparent no-repeat center !important;
+}
+.flipbook .couverture-back {
+	background: url("images/page_de_fin.png") transparent no-repeat center !important;
+}
+.flipbook .page-content {
+	padding: 20px;
+}
+.flipbook .page-content .text-success,
+.flipbook .page-content .text-danger {
+	text-shadow: 0.5px 0.5px 0px #000000;
+}
+#bestiaire {
+	display: none;
+}
+
+/*
+	MON COMPTE
+ */
+.mon-compte {
+	position: relative;
+	background: url("images/mon_compte.jpg") #000000 no-repeat center !important;
+	background-size: auto 100%;
+	color: white;
+	height: calc(100vh);
+	min-height: 800px;
+}
+@media (max-width: 992px) {
+	.mon-compte {
+		/*background: url("images/background_rejoindre_mobile.jpg") #000000 no-repeat right;*/
+		background-size: auto 100%;
+		height: 100%;
+	}
+}

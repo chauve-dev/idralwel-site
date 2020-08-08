@@ -1,0 +1,90 @@
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content rounded-0">
+        <div class="modal-body p-0">
+          <div class="p-4">
+            <form action="#" method="post" id="form-login">
+  
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fas fa-user"></i></div>
+                  </div>
+                  <input type="text" class="form-control" name="pseudo" id="pseudo" placeholder="Votre pseudo">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fas fa-lock"></i></div>
+                  </div>
+                  <input type="password" class="form-control" name="password" id="password" placeholder="Votre mot de passe">
+                </div>
+                <p class="mb-1 text-right"><small><a href="#" class="text-dark text-decoration-none" data-dismiss="modal" data-toggle="modal" data-target="#passwordModal">Mot de passe oublié ?</a></small></p>
+              </div>
+              <div class="form-group text-center">
+                <button type="submit" class="btn btn-outline-success">Se connecter</button>
+              </div>
+              <div class="text-center">
+                <p class="mb-1"><a href="#" class="text-dark text-decoration-none" data-dismiss="modal" data-toggle="modal" data-target="#registerModal">S'inscrire</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <form method="post" class="form-modal" id="form-register">
+            <p class="text-center">Créer un compte, lier-le à votre compte Minecraft et profiter de toutes les fonctionnalités inédites du site d'Idralwel.</p>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-pseudo"><i class="fas fa-user fa-lg"></i></span>
+              </div>
+              <input type="text" class="form-control form-input" name="pseudo" placeholder="Votre pseudo" aria-label="Votre pseudo" aria-describedby="addon-pseudo">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-email"><i class="fas fa-envelope fa-lg"></i></span>
+              </div>
+              <input type="text" class="form-control form-input" name="email" placeholder="Votre email" aria-label="Votre email" aria-describedby="addon-email">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-password"><i class="fas fa-lock fa-lg"></i></span>
+              </div>
+              <input type="password" class="form-control form-input" name="password" placeholder="Votre mot de passe" aria-label="Votre mot de passe" aria-describedby="addon-password">
+            </div>
+            <div class="form-group text-center mb-1">
+              <button type="submit" class="btn btn-outline-success">Créer un compte</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="passwordModal" tabindex="-1" role="dialog" aria-labelledby="passwordModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <form method="post" class="form-modal" id="form-password">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-email"><i class="fas fa-envelope fa-lg"></i></span>
+              </div>
+              <input type="text" class="form-control form-input" name="email" placeholder="Votre email" aria-label="Votre email" aria-describedby="addon-email">
+            </div>
+            <p class="text-center">Vous recevrez un email pour valider la demande et définir un nouveau mot de passe.</p>
+            <div class="form-group text-center mb-1">
+              <button type="submit" class="btn btn-outline-success">Valider</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

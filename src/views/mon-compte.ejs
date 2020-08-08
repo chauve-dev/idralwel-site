@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="/ressources/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/ressources/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="/index.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/images/favicon/site.webmanifest">
+
+  <title>Idralwel - Mon compte</title>
+</head>
+<body>
+
+  <%- include('partials/modals') %>
+
+<div class="mon-compte">
+
+  <header>
+    <%- include('partials/navbar') %>
+  </header>
+
+  <div class="content pb-2">
+    <div class="container">
+      <div class="p-5" style="background-color: rgba(0, 0, 0, 0.33);">
+
+        <div class="text-center p-3 mb-5" style="border: 1px solid yellow;">
+          <h3 class="mb-3">Armurerie de <strong>Pseudo</strong></h3>
+          <h5>Membre de la guilde <strong>Idralwel</strong></h5>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="p-4" style="border: 1px solid yellow !important;">
+              <h4 class="text-center GodOfWar">Niveau 28</h4>
+              <div class="text-center my-4">
+                <img src="https://crafatar.com/renders/body/552454b8-9697-4fce-9501-266d969f0132?overlay=true" alt="Pseudo">
+              </div>
+              <div class="d-flex justify-content-center">
+                <div class="mx-2">
+                  <img src="/images/heart.png" width="24" height="24"> <span style="font-size: 1.2rem;">423</span>
+                </div>
+                <div class="mx-2">
+                  <img src="/images/mana.png" width="24" height="24"> <span style="font-size: 1.2rem;">186</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8">
+
+            <div class="card bg-transparent" style="border: 1px solid yellow;">
+              <div class="card-body">
+                <p class="text-center">Pour profiter pleinement des fonctionnalités du site d'Idralwel, n'hésitez pas à relier ce compte à votre compte Minecraft et à votre compte Discord !</p>
+                <div class="d-flex">
+                  <a href="#" class="btn btn-outline-success btn-sm mr-1">Lier votre compte Minecraft</a>
+                  <a href="#" class="btn btn-outline-info btn-sm mr-1">Lier votre compte Discord</a>
+                  <a href="#" class="btn btn-outline-light btn-sm ml-auto">Voter pour le serveur</a>
+                </div>
+              </div>
+            </div>
+
+            <hr>
+
+            <p class="mb-0">Aventurer de <strong>niveau 28</strong></p>
+            <p>Membre de la guilde <strong>Idralwel</strong> (Niveau 5 - 38 membres)</p>
+
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <p class="mb-2 pb-1 border-bottom"><i>Statistiques du personnage :</i></p>
+                <p class="mb-0">- Force : 28</p>
+                <p class="mb-0">- Agilité : 25</p>
+                <p class="mb-0">- Sagesse : 18</p>
+                <p class="mb-0">- Intelligence : 21</p>
+                <p class="mb-0">- JESAISPAS : 24</p>
+              </div>
+              <div class="col-md-6 mb-4">
+                <p class="mb-2 pb-1 border-bottom"><i>Statistiques diverses :</i></p>
+                <p class="mb-0">- Temps de jeu : 3 jours et 18 heures</p>
+                <p class="mb-0">- Nombre de morts : 28</p>
+                <p class="mb-0">- Points de succès : 18</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="text-center">
+  <p class="m-0">© Copyright Idralwel 2020. Tous droits réservés.</p>
+  <p class="m-0"><small>Ce site n'est pas affilié avec Mojang.</small></p>
+</footer>
+
+<script src="/ressources/jquery/jquery.min.js"></script>
+<script src="/ressources/popper/popper.min.js"></script>
+<script src="/ressources/bootstrap/js/bootstrap.min.js"></script>
+<script src="/ressources/turnjs4/lib/turn.min.js"></script>
+</body>
+</html>

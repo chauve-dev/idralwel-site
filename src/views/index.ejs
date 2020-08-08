@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="/ressources/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/ressources/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="/index.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/images/favicon/site.webmanifest">
+
+  <title>Idralwel - Serveur MMORPG Minecraft</title>
+</head>
+<body>
+
+  <%- include('partials/modals') %>
+
+<header class="home-header">
+  <%- include('partials/navbar') %>
+  <div class="introduction">
+    <div class="container-fluid">
+      <img src="/images/morniandre.png" class="morniandre">
+      <img src="/images/idralwel.png" class="idralwel">
+      <img src="/images/logo.png" class="logo">
+      <img src="/images/texte.png" class="texte">
+      <img src="/images/cloud_front.png" class="cloud">
+    </div>
+  </div>
+</header>
+
+<div class="home-content">
+  <img class="position-relative img-fluid img-cloud" src="/images/cloud_bas.png">
+  <div class="container-fluid container-presentation">
+    <div class="presentation">
+      <div class="presentation-experience">
+        <div class="row">
+          <div class="col-xl-5" style="z-index: 10;">
+            <div class="col-texte">
+              <div class="text-center p-5">
+                <h4 class="GodOfWar">UNE EXPÉRIENCE UNIQUE</h4>
+                <div class="mb-4"><img class="img-fluid" src="/images/separateur_experience.png"></div>
+                <p>Idralwel est un MMORPG Minecraft basé sur un univers médiévial et fantastique écrit sur plus de 5 années.</p>
+                <p>Découvrez un univers complet, cohérent avec un Lore développé, complexe et parfaitement intégré sous diverses formes comme des livres, des dessins ou différentes énigmes.</p>
+                <p>Parcourez des maps créées et faconnées à la main, explorez des nombreuses contrées et parcourez de terribles donjons.</p>
+                <p>Combattez des centaines de créatures et adoptez différents style de jeu grâce à différentes armes.</p>
+                <p>Accomplissez des centaines de quêtes et sortez des sentiers battus pour découvrir de nombreux secrets.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-7 d-none d-xl-block col-image">
+            <img class="img-fluid" src="/images/experience.jpg">
+          </div>
+        </div>
+      </div>
+      <div class="presentation-communaute">
+        <div class="row">
+          <div class="col-xl-7 d-none d-xl-block col-image">
+            <img class="img-fluid" src="/images/communaute.jpg">
+          </div>
+          <div class="col-xl-5" style="z-index: 10;">
+            <div class="col-texte">
+              <div class="text-center p-5">
+                <h4 class="GodOfWar">UNE COMMUNAUTÉ SOUDÉE</h4>
+                <div class="mb-4"><img class="img-fluid" src="/images/separateur_experience.png"></div>
+                <p>Fort de son aspect MMORPG, Idralwel propose un gameplay unique basé sur l'entraide et la coopération entre joueurs.</p>
+                <p>Formez un groupe avec vos compagnons pour défier d'impitoyables monstres et récupérer de nouvelles armes et armures et bien d'autres objets épiques pour votre personnage.</p>
+                <p>Réunissez-vous sous une même bannière avec un système de guilde au sein du serveur et contribuez à son histoire et son développement.</p>
+                <p>Participez à de nombreux événements au sein d'Idralwel et sur nos différents réseaux en rejoignant notre grande famille pour une expérience inoubliable.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-reseaux">
+  <div class="reseaux">
+    <div class="container">
+      <h3 class="text-center text-white GodOfWar mb-3">SUIVEZ-NOUS SUR NOS RÉSEAUX SOCIAUX</h3>
+      <div class="row">
+        <div class="col-md-3 col-6">
+          <a href="https://discord.gg/gB7ESrS" target="_blank">
+            <img class="img-fluid" src="/images/icoDiscord.png" alt="Discord">
+          </a>
+        </div>
+        <div class="col-md-3 col-6">
+          <a href="https://twitter.com/Idralwel" target="_blank">
+            <img class="img-fluid" src="/images/icoTwitter.png" alt="Twitter">
+          </a>
+        </div>
+        <div class="col-md-3 col-6">
+          <a href="https://www.youtube.com/channel/UCXfJyUC4zzzl9P8MSVuwAcw" target="_blank">
+            <img class="img-fluid" src="/images/icoYoutube.png" alt="Youtube">
+          </a>
+        </div>
+        <div class="col-md-3 col-6">
+          <a href="https://www.instagram.com/idralwel.fr/" target="_blank">
+            <img class="img-fluid" src="/images/icoInstagram.png" alt="Instagram">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="text-center">
+  <p class="m-0">© Copyright Idralwel 2020. Tous droits réservés.</p>
+  <p class="m-0"><small>Ce site n'est pas affilié avec Mojang.</small></p>
+</footer>
+
+<script src="/ressources/jquery/jquery.min.js"></script>
+<script src="/ressources/popper/popper.min.js"></script>
+<script src="/ressources/bootstrap/js/bootstrap.min.js"></script>
+<script src="/ressources/turnjs4/lib/turn.min.js"></script>
+<script>
+  $(window).on('load', function(){
+    $('.morniandre').addClass('morniandre-after');
+    $('.idralwel').addClass('idralwel-after');
+    $('.logo').addClass('logo-after');
+    $('.texte').addClass('texte-after');
+  });
+</script>
+</body>
+</html>
