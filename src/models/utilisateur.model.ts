@@ -48,7 +48,7 @@ export class utilisateur extends Model {
                 uuid: {type: 'string', minLength: 36, maxLength: 36},
                 email: {type: 'string', minLength: 3, maxLength: 50},
                 pseudo: {type: 'string', minLength: 3, maxLength: 50},
-                password: {type: 'string', minLength: 32, maxLength: 32}
+                password: {type: 'string', minLength: 128, maxLength: 128}
             }
         }
     }

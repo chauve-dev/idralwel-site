@@ -18,9 +18,15 @@
             <li class="nav-item">
               <a class="nav-link" href="/encyclopedie">Encyclopédie</a>
             </li>
+            <% if(!logged){ %>
             <li class="nav-item">
               <a class="nav-link border" href="#" data-dismiss="modal" data-toggle="modal" data-target="#loginModal">Se connecter</a>
             </li>
+            <% }else{%>
+              <li class="nav-item">
+                <a class="nav-link border" href="/logout">Se deconnecté</a>
+              </li>
+            <% } %>
           </ul>
         </div>
       </nav>
