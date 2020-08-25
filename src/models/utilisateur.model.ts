@@ -17,7 +17,7 @@ export class utilisateur extends Model {
           modelClass: bestiaire,
           join: {
             from: 'utilisateurs.id',
-            to: 'bestiaires.userid'
+            to: 'bestiaires.id_utilisateur'
           }
         }
       };

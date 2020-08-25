@@ -1,11 +1,33 @@
 import { Model } from 'objection';
 import knex from '../knex'
 import { subController } from '../subController'
+import { utilisateur } from './utilisateur.model';
+import { entree } from './entree.model';
 
 Model.knex(knex)
 
 export class bestiaire extends Model {
-    //username!: string;
+    id_utilisateur!: number;
+    id_entree!: number;
+
+    static relationMappings = {
+        utilisateur: {
+            relation: Model.HasOneRelation,
+            modelClass: utilisateur,
+            join: {
+                from: 'bestiaires.id_utilisateur',
+                to: 'utilisateurs.id'
+            }
+        },
+        entree: {
+            relation: Model.HasOneRelation,
+            modelClass: entree,
+            join: {
+                from: 'bestiaires.id_entree',
+                to: 'entrees.id'
+            }
+        }
+      };
 
     static get tableName() {
         return 'bestiaires';
@@ -26,10 +48,11 @@ export class bestiaire extends Model {
     static get jsonSchema() {
         return {
             type: 'object',
-            required: [],
+            required: ['id_utilisateur', 'id_entree'],
             
             properties: {
-                id: {type: 'integer'}
+                id_utilisateur: {type: 'integer'},
+                id_entree: {type: 'integer'}
             }
         }
     }

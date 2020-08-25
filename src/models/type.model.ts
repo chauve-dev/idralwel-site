@@ -1,11 +1,23 @@
 import { Model } from 'objection';
 import knex from '../knex'
 import { subController } from '../subController'
+import { entree } from './entree.model';
 
 Model.knex(knex)
 
 export class type extends Model {
-    //username!: string;
+    nom!: string;
+
+    static relationMappings = {
+        entree: {
+            relation: Model.HasManyRelation,
+            modelClass: entree,
+            join: {
+                from: 'types.id',
+                to: 'entrees.id_type'
+            }
+        }
+    }
 
     static get tableName() {
         return 'types';
@@ -29,7 +41,8 @@ export class type extends Model {
             required: [],
             
             properties: {
-                id: {type: 'integer'}
+                id: {type: 'integer'},
+                nom: {type: 'string'}
             }
         }
     }
